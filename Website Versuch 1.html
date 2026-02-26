@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pepe Sommer | Personal Brand</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f172a;
+    --accent:#2563eb;
+    --light:#f1f5f9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    color:var(--primary);
+}
+
+/* ===== HEADER PARALLAX ===== */
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(15,23,42,0.7),rgba(15,23,42,0.7)),
+    url('https://i.pinimg.com/1200x/19/42/3c/19423cb36b0b14272fb14e3bc027bcb5.jpg') center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    animation:fadeIn 1.5s ease-in-out;
+}
+
+.hero h1{
+    font-size:3.5rem;
+    font-weight:700;
+}
+
+.hero p{
+    margin-top:15px;
+    font-size:1.3rem;
+    font-weight:300;
+}
+
+.hero button{
+    margin-top:30px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:var(--accent);
+    color:white;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.05);
+}
+
+/* ===== NAV ===== */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    color:white;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:500;
+}
+
+/* ===== SECTIONS ===== */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* ===== ABOUT ===== */
+
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+    max-width:700px;
+    margin:auto;
+}
+
+.skill{
+    margin-bottom:30px;
+}
+
+.progress{
+    background:#e2e8f0;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:12px;
+    width:0;
+    background:linear-gradient(90deg,#2563eb,#3b82f6);
+    border-radius:20px;
+    transition:1.5s ease;
+}
+
+/* ===== BLOG ===== */
+
+.blog-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.blog-card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.blog-card:hover{
+    transform:translateY(-10px);
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    text-align:center;
+    padding:40px;
+    background:var(--primary);
+    color:white;
+}
+
+/* ===== ANIMATION ===== */
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div><strong>Pepe Sommer</strong></div>
+    <div>
+        <a href="#about">Über mich</a>
+        <a href="#skills">Skills</a>
+        <a href="#blog">Blog</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Pepe Sommer</h1>
+    <p>Volksbank | Business & Finanzen | Bänker</p>
+    <button onclick="document.getElementById('about').scrollIntoView()">Mehr erfahren</button>
+</section>
+
+<section id="about">
+    <h2 class="section-title">Über mich</h2>
+    <div class="about">
+        Mein Name ist Pepe Sommer. Ich besuche derzeit das Berufsschulzentrum Waldkirch und werde im Sommer meinen Realschulabschluss erwerben. 
+        
+        Ab September beginne ich meine Ausbildung zum Bankkaufmann bei der Volksbank Freiburg eG.
+        
+        
+        Wirtschaftliche Zusammenhänge und die Arbeit mit Menschen begeistern mich gleichermaßen – zwei Aspekte, die den Beruf des Bankkaufmanns für mich zur idealen Wahl machen. 
+        Mit der Volksbank Freiburg eG habe ich dabei einen Arbeitgeber gefunden, dessen genossenschaftliche Werte – Vertrauen, Gemeinschaft und Verantwortung – ich voll und ganz teile.
+    </div>
+</section>
+
+<section id="skills">
+    <h2 class="section-title">Meine Skills</h2>
+    <div class="skills">
+
+        <div class="skill">
+            <p>Finance & Wirtschaft</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="85%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Vertrieb & Kundenberatung</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="93%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Personal Branding & Auftreten</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <p>Digitale Affinität</p>
+            <div class="progress">
+                <div class="progress-bar" data-width="75%"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="blog">
+    <h2 class="section-title">Blog</h2>
+    <div class="blog-grid">
+
+        <div class="blog-card">
+            <h3>Warum Finanzbildung entscheidend ist</h3>
+            <p>Gedanken über wirtschaftliche Eigenverantwortung und langfristige Strategie.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Stil als Erfolgsfaktor</h3>
+            <p>Wie Auftreten und Kleidung im Business-Kontext wirken.</p>
+        </div>
+
+        <div class="blog-card">
+            <h3>Disziplin & Performance</h3>
+            <p>Was Sport, Business und mentale Stärke gemeinsam haben.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Pepe Sommer | Personal Brand Website
+</footer>
+
+<script>
+window.addEventListener("scroll",function(){
+    const bars=document.querySelectorAll(".progress-bar");
+    bars.forEach(bar=>{
+        const rect=bar.getBoundingClientRect();
+        if(rect.top < window.innerHeight){
+            bar.style.width=bar.getAttribute("data-width");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
